@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Typing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #container {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            margin: 20px auto;
+            border: 2px solid #000;
+        }
+
+        #gun {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 100px;
+        }
+
+        .word {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            transition: top 1s linear;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #score {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Typing Game</h1>
+    <div id="container">
+        <img id="gun" src="gun.png" alt="Gun">
+    </div>
+    <div id="score">Score: 0</div>
+
+    <script>
+        var words = ["apple", "banana", "cherry", "grape", "orange"];
+        var score = 0;
+        var intervalId = null;
+        var currentWord = null;
+        var gameOver = false;
+
+        function getRandomWord() {
+            return words[Math.floor(Math.random() * words.length)];
+        }
+
+        function createWord() {
+            if (gameOver) return;
+
+            var word = document.createElement("span");
+            word.className = "word";
+            word.textContent = getRandomWord();
+            document.getElementById("container").appendChild(word);
+            currentWord = word;
+
+            var containerWidth = document.getElementById("container").offsetWidth;
+            var wordWidth = word.offsetWidth;
+            var maxLeft = containerWidth - wordWidth;
+            var left = Math.floor(Math.random() * maxLeft);
+            word.style.left = left + "px";
+
+            setTimeout(function() {
+                word.style.top = document.getElementById("container").offsetHeight + "px";
+            }, 0);
+
+            var intervalId = setInterval(function() {
+                if (gameOver) {
+                    clearInterval(intervalId);
+                    return;
+                }
+
+                var top = word.offsetTop;
+                word.style.top = top + 1 + "px";
+
+                if (top > document.getElementById("container").offsetHeight) {
+                    clearInterval(intervalId);
+                    if (!word.classList.contains("hidden")) {
+                        endGame();
+                    }
+                    word.remove();
+                }
+            }, 10);
+        }
+
+        function startGame() {
+            gameOver = false;
+            intervalId = setInterval(function() {
+                createWord();
+            }, 1500);
+        }
+
+        function endGame() {
+            gameOver = true;
+            clearInterval(intervalId);
+            currentWord = null;
+            alert("Game over! Your score: " + score);
+            score = 0;
+            document.getElementById("score").textContent = "Score: " + score;
+        }
+
+        document.addEventListener("keydown", function(event) {
+            if (gameOver || !currentWord) return;
+
+            var typedLetter = String.fromCharCode(event.keyCode).toLowerCase();
+            var wordText = currentWord.textContent.toLowerCase();
+
+            if (typedLetter === wordText[0]) {
+                currentWord.textContent = wordText.substring(1);
+
+                if (wordText.length === 1) {
+                    currentWord.classList.add("hidden");
+                    setTimeout(function() {
+                        currentWord.remove();
+                        currentWord = null;
+                        score++;
+                        document.getElementById("score").textContent = "Score: " + score;
+                    }, 500);
+                }
+            }
+        });
+
+        startGame();
+    </script>
+</body>
+</html>

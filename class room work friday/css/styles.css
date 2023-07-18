@@ -1,0 +1,49 @@
+.nav
+{
+   background-color: #333;
+   color: #fff;
+   padding: 20px;
+   text-align: center;
+ }
+
+
+
+ /* nav bar */
+nav
+{
+ margin-top: 20px;
+}
+
+nav ul
+{
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+nav ul li
+{
+   display: inline-block;
+   margin-right: 10px;
+}
+
+a
+{
+   color: #fff;
+}
+
+
+
+/* table */
+table
+{
+      width: 100%;
+      border-collapse: collapse;
+}
+
+th, td
+{
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+}

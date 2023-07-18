@@ -1,0 +1,37 @@
+body
+{
+    margin: 0px;
+}
+
+.header
+{
+    background:  linear-gradient(90deg, rgba(181,156,255,1) 0%, rgba(0,11,212,1) 44%, rgba(18,0,106,1) 78%);
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo
+{
+    display:flex;
+    align-items: center;
+}
+.logo img
+{
+    height: 70px;
+    margin: 0px 10px 0 0;
+}
+.menu
+{
+    display: flex;
+    list-style: none;
+}
+.menu li
+{
+    margin: 0px 10px 0px 0px;
+}
+.menu li a
+{
+    text-decoration: none;
+    color:white;
+}
