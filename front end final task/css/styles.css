@@ -1,0 +1,366 @@
+body
+{
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:aliceblue;
+    
+}
+
+/* header */
+header{
+    height: 100vh;
+}
+.bg
+{
+    background: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position:absolute;
+    filter: blur(5px);
+}
+.dashboard
+{
+    position:relative; 
+}
+.nav
+{
+       
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    color: white;
+}
+.center ul,.right ul
+{
+    display: flex;
+    list-style: none;
+}
+
+.center ul li
+{
+    padding: 0 10px;
+}
+
+.right ul li a img
+{
+    width: 50%;
+}
+.right h2{
+    font-size: large;
+    padding: 4px;
+    border-bottom: 3px double blue;
+}
+
+.heading
+{
+    width: 30%;
+    height: auto;
+    margin: 30vh auto;
+    color: white;
+    
+}
+
+.button a
+{
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    border-radius: 14px;
+    padding: 10px;
+}
+.button:hover a
+{
+    background-color: rgb(255, 255, 255);
+    transition: 1s;
+    color: blue;
+}
+
+
+/* main */
+
+
+
+/* section 1  */
+.feature
+{
+    max-width: 800px;
+    margin: 80px auto;
+}
+.feature h1
+{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.grid1
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:20px;
+}
+.grid2
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px;
+}
+.grid-item
+{
+    width: 100%;
+    height: 200px; 
+}
+.grid-item img
+{
+    width: 100%;
+    height: 100%;
+}
+
+/* section 2 */
+.team
+{   
+    max-width: 800px;
+    margin: 120px auto;
+}
+.team h1
+{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+.team p{
+    text-align: center;
+}
+.tgrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:15px;
+}
+.titem
+{
+    width: 100%;
+    height: 250px; 
+}
+.titem img
+{
+    width: 100%;
+    height: 100%;
+}
+.titem h1, .titem h2
+{
+    margin: 0;
+    text-align: center;
+}
+.titem h1{
+    font-size: 16px;
+}.titem h2{
+    font-size: 12px;
+}
+
+
+/* section 3 */
+.services
+{
+    max-width: 800px;
+    margin: 160px auto;
+}
+.services h1
+{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+.services h2
+{
+    text-align: center;
+    font-size: 35px;    
+}
+.sgrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.sitem{
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+    background: white;
+}
+.sitem h1, .sitem p{
+    margin-top:-10px ;
+}
+
+/* section 4 */
+.contact
+{
+    max-width: 800px;
+    margin: 160px auto;
+}
+.contact h1
+{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+.contact p
+{
+    text-align: center;
+}
+.fromElement{
+    width: 100%;
+    margin: 10px auto;
+    min-height: 20px;
+}
+.submit
+{
+    margin-left: 5px;
+    width: 100%;
+    margin: 10px auto;
+    min-height: 50px;
+    background-color:rgb(144, 144, 255);
+}
+.fromElement, .submit
+{
+    border-radius: 30px;
+    padding: 10px;
+}
+.fgrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:40px;
+}
+/* section 5 */
+.work
+{
+    margin-left: 25%;
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-items: end;
+    align-items: center;
+}
+.work .img img{
+    border-radius: 30px 0 0 30px;
+}
+
+/* section 6 */
+.about
+{
+    max-width: 100vw;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.aitem
+{
+    background-color: rgb(55, 55, 55);
+}
+.aitem img
+{
+    width: 100%;
+}
+.aitem a
+{
+    text-decoration: none;
+    color: white;
+}
+.about .text
+{
+    padding: 12% 10%;
+    color: white;
+}
+.aitem .button 
+{
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    border-radius: 14px;
+    padding: 5px;
+}
+.aitem .button:hover
+{
+    color: rgb(0, 6, 77);
+    background-color: rgb(255, 255, 255);
+    transition: 1s;
+}
+
+/* section 7 */
+.quote
+{
+    max-width: 100vw;
+}
+.quote img
+{
+    width: 100%;
+}
+.background{
+    position: relative;
+}
+.content
+{
+    position: absolute;
+    top:20%;
+    left: 25%;
+    text-align: center;
+    width: 50%;
+    height: auto;
+    color: aliceblue;
+}
+.qut {
+    font-size: 50px;
+}
+.content img
+{
+    width: 100px;
+}
+.content h3, .content h4{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+/* footer */
+
+footer{
+    background-color: black;
+    padding: 30px 20%;
+    margin-top: 30px;
+}
+.navf
+{
+    margin-bottom: 100px;
+}
+footer hr
+{
+    border-bottom: none;
+}
+.ftext
+{
+    text-align: center;
+    color: white;
+    font-size: small;
+    margin-bottom: 100px;
+}
+.ftext a
+{
+    color: blueviolet;
+}
+
+
+
+
+@media  screen and (max-width:400px)
+{
+    .nav{
+        max-width: 500px;
+    }
+}

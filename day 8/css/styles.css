@@ -1,0 +1,32 @@
+.container
+{
+    max-width: 1400px;
+    margin: auto;
+    text-align: center;
+}
+.c-box
+{
+    display: flex;
+    gap:30px;
+    margin: 30px auto;
+}
+.box
+{
+    border:1px solid rgb(255, 255, 255);
+    width:33%;
+    border-radius: 10px;
+    box-shadow:0 0 5px 0px black;
+}
+
+.submit
+{
+    
+    border: 1px solid whitesmoke;
+    box-shadow: 0 0 10px 0 black;
+    border-radius: 10px;
+}
+.name input
+{
+    margin: 20px auto;
+    width:40%;
+}
