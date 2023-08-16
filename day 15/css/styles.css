@@ -1,0 +1,23 @@
+/* Stylesheet */
+
+.navbar {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+  
+  .hero {
+    background: url('hero-img.jpg');
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .search-bar {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Other Styles */
+  
